@@ -1,10 +1,10 @@
 import styles from './Input.module.css';
 
-function Input({ width, icon }) {
+function Input({ width, icon, value, onChange, placeholder }) {
     return (
         <div style={{ width }} className={styles.inputContainer}>
             <span>{icon}</span>
-            <input placeholder={'Title...'} />
+            <input value={value} onChange={onChange} placeholder={placeholder} />
         </div>
     );
 }
