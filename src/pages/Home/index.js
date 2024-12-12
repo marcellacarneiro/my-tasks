@@ -36,10 +36,12 @@ function Home({ tasks, setTasks, newTaskTitle, setNewTaskTitle }) {
             </div>
             <ul>
                 {tasks.map((task) => {
+                    const taskTitle = task.title ? task.title : '[Untitled]';
                     return (
                         <ItemList
                             key={task.id}
-                            title={task.title}
+                            id={task.id}
+                            title={taskTitle}
                             description={task.description}
                             status={task.status}
                             toggleStatus={() => toggleTaskStatus(task.id)}
