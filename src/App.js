@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import Button from './components/Button';
-import Header from './components/Header';
-import Input from './components/Input';
-import ItemList from './components/ItemList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import AddTask from './pages/AddTask';
 
 function App() {
     const mockDatabase = {
@@ -15,32 +14,25 @@ function App() {
         ],
     };
     const [tasks, setTasks] = useState(mockDatabase.tasks);
-
-    const handleAddTask = (newTask) => {
-        setTasks([...tasks, newTask]);
-        console.log(mockDatabase.tasks);
-    };
+    const [newTaskTitle, setNewTaskTitle] = useState('');
 
     return (
-        <>
-            <Header />
-            <div className="inputButtonContainer">
-                <Input width={'73%'} icon={'+'} />
-                <Button name={'Add Task'} width={'25%'} onClick={handleAddTask} />
-            </div>
-            <ul>
-                {tasks.map((task) => {
-                    return (
-                        <ItemList
-                            key={task.id}
-                            title={task.title}
-                            description={task.description}
-                            status={task.status}
+        <Router>
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <Home
+                            tasks={tasks}
+                            setTasks={setTasks}
+                            newTaskTitle={newTaskTitle}
+                            setNewTaskTitle={setNewTaskTitle}
                         />
-                    );
-                })}
-            </ul>
-        </>
+                    }
+                />
+                <Route path="/add-task" element={<AddTask tasks={tasks} setTasks={setTasks} />} />
+            </Routes>
+        </Router>
     );
 }
 
