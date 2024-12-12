@@ -1,0 +1,42 @@
+.itemList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemList > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.75rem 0.5rem;
+}
+
+.itemList div h2 {
+    margin-bottom: 0.5rem;
+}
+
+.itemList .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+    color: #7d7d7d;
+}
+
+.itemList .pending,
+.done {
+    color: #fff;
+    padding: 0.4rem 0.7rem;
+    border-radius: 1rem;
+}
+
+.itemList .pending {
+    background-color: #e95c5c;
+}
+
+.itemList .done {
+    background-color: #22c17f;
+}
+
+.itemList + hr {
+    border-top: 1px solid #e8e8e8;
+}
