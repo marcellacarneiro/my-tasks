@@ -1,0 +1,26 @@
+.inputContainer {
+    height: 2.5rem;
+    background-color: #eaeaea;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}
+
+.inputContainer span {
+    font-size: 2rem;
+    color: #929292;
+}
+
+.inputContainer input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 6px;
+    font-size: 1rem;
+}
+
+.inputContainer input:focus {
+    outline: none;
+}
