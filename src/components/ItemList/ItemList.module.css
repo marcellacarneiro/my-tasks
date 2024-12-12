@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     padding: 0.75rem 0.5rem;
+    width: 200px;
 }
 
 .itemList div h2 {
@@ -16,6 +17,7 @@
     white-space: nowrap;
     max-width: 200px;
     margin-bottom: 0.5rem;
+    font-size: 20px;
 }
 
 .itemList .description {
@@ -29,20 +31,35 @@
 .itemList .pending,
 .done {
     color: #fff;
-    padding: 0.3rem 0.5rem;
+    padding: 0.1rem 0.4rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 0.85rem;
+    justify-content: center;
+    font-size: 0.8rem;
+    height: 2rem;
+    width: 3rem;
 }
 
 .itemList .pending {
-    background-color: #e95c5c;
+    background-color: #a02727;
 }
 
 .itemList .done {
-    background-color: #22c17f;
+    background-color: #27a043;
+}
+
+.itemList .icon {
+    width: 16px;
+    height: 16px;
+}
+
+.itemList .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
 }
 
 .itemList + hr {

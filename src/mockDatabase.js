@@ -4,7 +4,7 @@ export const mockDatabase = {
             id: 1,
             title: 'Complete weekly report',
             description: 'Complete the weekly progress report and send it to the manager before the deadline.',
-            status: 'pending',
+            status: 'done',
         },
         {
             id: 2,
@@ -16,7 +16,7 @@ export const mockDatabase = {
             id: 3,
             title: 'Plan team meeting',
             description: 'Define the agenda and prepare slides for the Monday meeting.',
-            status: 'done',
+            status: 'pending',
         },
         {
             id: 4,
@@ -36,7 +36,7 @@ export const mockDatabase = {
 - Develop promotional materials, such as banners, flyers, and custom giveaways.
 - Set up an online registration system to facilitate participant sign-up.
 - Ensure that all safety measures and protocols comply with local regulations.`,
-            status: 'done',
+            status: 'pending',
         },
     ]
 }
