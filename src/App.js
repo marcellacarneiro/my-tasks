@@ -1,18 +1,11 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { mockDatabase } from './mockDatabase';
 import Home from './pages/Home';
 import AddTask from './pages/AddTask';
+import Task from './pages/Task';
 
 function App() {
-    const mockDatabase = {
-        tasks: [
-            { id: 1, title: 'Task 1', description: 'Task 1 description', status: 'pending' },
-            { id: 2, title: 'Task 2', description: 'Task 2 description', status: 'done' },
-            { id: 3, title: 'Task 3', description: 'Task 3 description', status: 'done' },
-            { id: 4, title: 'Task 4', description: 'Task 4 description', status: 'pending' },
-            { id: 5, title: 'Task 5', description: 'Task 5 description', status: 'done' },
-        ],
-    };
     const [tasks, setTasks] = useState(mockDatabase.tasks);
     const [newTaskTitle, setNewTaskTitle] = useState('');
 
@@ -31,6 +24,7 @@ function App() {
                     }
                 />
                 <Route path="/add-task" element={<AddTask tasks={tasks} setTasks={setTasks} />} />
+                <Route path="/task/:id" element={<Task tasks={tasks} />} />
             </Routes>
         </Router>
     );
