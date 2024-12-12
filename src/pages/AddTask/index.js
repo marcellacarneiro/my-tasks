@@ -5,6 +5,7 @@ import Button from '../../components/Button';
 import Header from '../../components/Header';
 import { AlignJustify, Type } from 'lucide-react';
 import TextArea from '../../components/TextArea';
+import './style.css'
 
 function AddTask({ tasks, setTasks }) {
     const location = useLocation();
@@ -28,7 +29,7 @@ function AddTask({ tasks, setTasks }) {
     };
 
     return (
-        <div>
+        <div className='container'>
             <Header />
             <Input
                 width={'100%'}
@@ -43,7 +44,9 @@ function AddTask({ tasks, setTasks }) {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
             />
-            <Button name="Save Task" width="100%" onClick={handleAddTask} />
+            <div className='buttonContainer'>
+                <Button name="Save Task" width="100%" onClick={handleAddTask} />
+            </div>
         </div>
     );
 }
