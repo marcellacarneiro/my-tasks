@@ -1,0 +1,26 @@
+.textAreaContainer {
+    height: 200px;
+    background-color: #eaeaea;
+    border-radius: 6px;
+    display: flex;
+    padding: 6px;
+    margin: 1rem 0 1.5rem;
+}
+
+.textAreaContainer textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    margin-top: 6px;
+    padding: 0px 6px;
+    font-size: 1rem;
+}
+
+.textAreaContainer span {
+    font-size: 2rem;
+    color: #929292;
+}
+
+.textAreaContainer textarea:focus {
+    outline: none;
+}
