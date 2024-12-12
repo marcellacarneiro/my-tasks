@@ -20,6 +20,10 @@ function Home({ tasks, setTasks, newTaskTitle, setNewTaskTitle }) {
             )
         );
     };
+    
+    const handleDeleteTask = (id) => {
+        setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id))
+    }
 
     return (
         <>
@@ -45,6 +49,7 @@ function Home({ tasks, setTasks, newTaskTitle, setNewTaskTitle }) {
                             description={task.description}
                             status={task.status}
                             toggleStatus={() => toggleTaskStatus(task.id)}
+                            deleteTask={() => handleDeleteTask(task.id)}
                         />
                     );
                 })}

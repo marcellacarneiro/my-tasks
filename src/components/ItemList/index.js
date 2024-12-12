@@ -1,14 +1,14 @@
-import { X, Check } from 'lucide-react';
+import { Clock, Check, Trash2 } from 'lucide-react';
 import styles from './ItemList.module.css';
 import { useNavigate } from 'react-router-dom';
 
-function ItemList({ id, title, status, description, toggleStatus }) {
+function ItemList({ id, title, status, description, toggleStatus, deleteTask }) {
     const navigate = useNavigate();
     const handleOpenTaskDetails = () => {
-        navigate(`/task/${id}`)
-    }
+        navigate(`/task/${id}`);
+    };
     const taskIsDone = status === 'done';
-    const Icon = taskIsDone ? Check : X;
+    const StatusIcon = taskIsDone ? Check : Clock;
 
     return (
         <>
@@ -19,11 +19,14 @@ function ItemList({ id, title, status, description, toggleStatus }) {
                         {description}
                     </p>
                 </div>
-                <div>
+                <div className={styles.container}>
                     <div className={taskIsDone ? styles.done : styles.pending} onClick={toggleStatus}>
-                        <Icon style={{ width: '17px' }} />
-                        <p>{status}</p>
+                        <StatusIcon className={styles.icon} />
                     </div>
+                    <Trash2
+                        style={{ width: '24px', height: '24px' }}
+                        onClick={deleteTask}
+                    />
                 </div>
             </div>
             <hr />
