@@ -1,8 +1,5 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    min-height: 90vh;
+.titleContainer {
+    margin-block: 1rem;
 }
 
 .titleContainer h1, .description {

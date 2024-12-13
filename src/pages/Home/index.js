@@ -27,7 +27,7 @@ function Home({ tasks, setTasks, newTaskTitle, setNewTaskTitle }) {
     };
 
     return (
-        <>
+        <div className='container'>
             <Header />
             <div className="inputButtonContainer">
                 <Input
@@ -62,7 +62,7 @@ function Home({ tasks, setTasks, newTaskTitle, setNewTaskTitle }) {
                     })}
                 </ul>
             )}
-        </>
+        </div>
     );
 }
 
