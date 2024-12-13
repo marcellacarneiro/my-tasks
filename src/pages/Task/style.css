@@ -9,6 +9,11 @@
     margin-bottom: .5rem;
 }
 
+.description {
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+}
+
 .buttonContainer {
     margin-top: auto;
 }
