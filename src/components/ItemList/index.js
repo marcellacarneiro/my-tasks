@@ -24,7 +24,7 @@ function ItemList({ id, title, status, description, toggleStatus, deleteTask }) 
                         <StatusIcon className={styles.icon} />
                     </div>
                     <Trash2
-                        style={{ width: '24px', height: '24px' }}
+                        style={{ width: '24px', height: '24px', cursor: 'pointer' }}
                         onClick={deleteTask}
                     />
                 </div>
