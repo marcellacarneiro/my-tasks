@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import logo from '../../assets/mytasks-logo.png';
+import logo from '../../assets/logo.png';
 
 function Header() {
     return (
