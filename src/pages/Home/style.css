@@ -1,0 +1,19 @@
+.inputButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.containerNoTasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.containerNoTasks p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.15rem;
+    color: #787878;
+}

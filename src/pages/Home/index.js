@@ -3,7 +3,8 @@ import Header from '../../components/Header';
 import Input from '../../components/Input';
 import ItemList from '../../components/ItemList';
 import { Plus } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import './style.css';
 
 function Home({ tasks, setTasks, newTaskTitle, setNewTaskTitle }) {
     const navigate = useNavigate();
@@ -20,10 +21,10 @@ function Home({ tasks, setTasks, newTaskTitle, setNewTaskTitle }) {
             )
         );
     };
-    
+
     const handleDeleteTask = (id) => {
-        setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id))
-    }
+        setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+    };
 
     return (
         <>
@@ -38,22 +39,29 @@ function Home({ tasks, setTasks, newTaskTitle, setNewTaskTitle }) {
                 />
                 <Button name={'Add Task'} width={'25%'} onClick={handleNavigateToAddTask} />
             </div>
-            <ul>
-                {tasks.map((task) => {
-                    const taskTitle = task.title ? task.title : '[Untitled]';
-                    return (
-                        <ItemList
-                            key={task.id}
-                            id={task.id}
-                            title={taskTitle}
-                            description={task.description}
-                            status={task.status}
-                            toggleStatus={() => toggleTaskStatus(task.id)}
-                            deleteTask={() => handleDeleteTask(task.id)}
-                        />
-                    );
-                })}
-            </ul>
+            {tasks.length === 0 ? (
+                <div className="containerNoTasks">
+                    <p>No tasks available.</p>
+                    <p> Start by adding a new one!</p>
+                </div>
+            ) : (
+                <ul>
+                    {tasks.map((task) => {
+                        const taskTitle = task.title ? task.title : '[Untitled]';
+                        return (
+                            <ItemList
+                                key={task.id}
+                                id={task.id}
+                                title={taskTitle}
+                                description={task.description}
+                                status={task.status}
+                                toggleStatus={() => toggleTaskStatus(task.id)}
+                                deleteTask={() => handleDeleteTask(task.id)}
+                            />
+                        );
+                    })}
+                </ul>
+            )}
         </>
     );
 }
