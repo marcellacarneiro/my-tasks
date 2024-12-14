@@ -18,6 +18,11 @@ Com uma interface limpa e simples, este projeto inclui as seguintes funcionalida
 
 ![App Screenshot](src/assets/mytasks-demo.gif)
 
+## Deploy
+
+O projeto está disponível em:  
+🔗 **[MyTasks - TODO App](https://my-tasks-chi.vercel.app/)**
+
 ## Construído com
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
