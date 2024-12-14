@@ -45,7 +45,7 @@ function AddTask({ tasks, setTasks }) {
                 onChange={(e) => setDescription(e.target.value)}
             />
             <div className='buttonContainer'>
-                <Button name="Save Task" width="100%" onClick={handleAddTask} />
+                <Button title="Save Task" width="100%" onClick={handleAddTask} />
             </div>
         </div>
     );

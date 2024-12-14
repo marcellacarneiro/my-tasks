@@ -37,7 +37,7 @@ function Home({ tasks, setTasks, newTaskTitle, setNewTaskTitle }) {
                     onChange={(e) => setNewTaskTitle(e.target.value)}
                     placeholder={'Title...'}
                 />
-                <Button name={'Add Task'} width={'25%'} onClick={handleNavigateToAddTask} />
+                <Button title={'Add Task'} width={'25%'} onClick={handleNavigateToAddTask} />
             </div>
             {tasks.length === 0 ? (
                 <div className="containerNoTasks">

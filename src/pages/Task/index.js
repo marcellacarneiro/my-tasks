@@ -28,9 +28,7 @@ function Task({ tasks }) {
                     </div>
                     <pre className="description">{task.description}</pre>
                     <div className="buttonContainer">
-                        <Button name={'Voltar'} width={'100%'} onClick={() => navigate('/')}>
-                            Voltar
-                        </Button>
+                        <Button title={'Back'} width={'100%'} onClick={() => navigate('/')} />
                     </div>
                 </>
             )}

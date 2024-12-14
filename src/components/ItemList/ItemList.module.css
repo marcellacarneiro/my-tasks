@@ -63,6 +63,12 @@
     align-items: center;
 }
 
+.itemList .trashIcon {
+   width: 24px;
+   height: 24px;
+   cursor: pointer;
+}
+
 .itemList + hr {
     border-top: 1px solid #e8e8e8;
 }
